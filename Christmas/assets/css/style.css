@@ -1,0 +1,452 @@
+    @import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        background-color: #6ca0d4;
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+    }
+
+    h1 {
+        position: fixed;
+        top: 6%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Arial', sans-serif;
+        font-size: 30px;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        animation: changeColor 5s infinite alternate;
+    }
+
+    @keyframes changeColor {
+        0% {
+            color: #ff0000;
+            /* Màu đỏ */
+        }
+
+        50% {
+            color: #00ff00;
+            /* Màu xanh lá cây */
+        }
+
+        100% {
+            color: #0000ff;
+            /* Màu xanh dương */
+        }
+    }
+
+    .xmas-tree {
+        position: relative;
+        width: 500px;
+        height: 590px;
+        z-index: -2;
+    }
+
+    .star {
+        z-index: 3;
+        position: absolute;
+        color: #fffc00;
+        font-size: 30px;
+        text-shadow: 0 0 20px #fffc00;
+        left: 51%;
+        top: 17%;
+        margin-left: -22px;
+        animation: spin 2s infinite linear forwards;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+
+    .fa-solid {}
+
+    .fa-star {}
+
+    .t1 {
+        position: absolute;
+        z-index: 2;
+        border-bottom: 100px solid #2bd937;
+        margin-left: -100px;
+        border-right: 100px solid transparent;
+        border-left: 100px solid transparent;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        top: 20%;
+        left: 50%;
+    }
+
+    .t2 {
+        position: absolute;
+        z-index: 1;
+        border-bottom: 125px solid #26bd30;
+        margin-left: -125px;
+        border-right: 125px solid transparent;
+        border-left: 125px solid transparent;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        top: 27%;
+        left: 50%;
+    }
+
+    .t3 {
+        position: absolute;
+        border-bottom: 150px solid #1f9927;
+        margin-left: -150px;
+        border-right: 150px solid transparent;
+        border-left: 150px solid transparent;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        top: 34%;
+        left: 50%;
+    }
+
+    .t1::before,
+    .t1::after,
+    .t2::before,
+    .t2::after,
+    .t3::before,
+    .t3::after {
+        position: absolute;
+        content: "";
+        background-color: #d6d400;
+        z-index: 3;
+        width: 10px;
+        height: 20px;
+        border-radius: 50px;
+        animation: blink 1.5s infinite;
+    }
+
+    .t2::before,
+    .t2::after {
+        animation-delay: 0.5s;
+    }
+
+    .t3::before,
+    .t3::after {
+        animation-delay: 1s;
+    }
+
+    @keyframes blink {
+        30% {
+            background: rgb(255, 252, 0);
+            box-shadow: 0 0 20px 10px #fffc0059;
+        }
+
+        60% {
+            background: #d6d400;
+            box-shadow: 0 0 0px 0px #fffc0059;
+        }
+    }
+
+    .t1::before {
+        top: 77px;
+        left: -82px;
+    }
+
+    .t1::after {
+        top: 77px;
+        right: -82px;
+    }
+
+    .t2::before {
+        top: 98px;
+        left: -103px;
+    }
+
+    .t2::after {
+        top: 98px;
+        right: -103px;
+    }
+
+    .t3::before {
+        top: 118px;
+        left: -122px;
+    }
+
+    .t3::after {
+        top: 118px;
+        right: -122px;
+    }
+
+    .ornament {
+        position: absolute;
+        background-color: rgb(224, 78, 78);
+        /* Màu chấm đỏ */
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        z-index: 4;
+    }
+
+    @keyframes blink-dot-1 {
+        0% {
+            background: rgb(255, 252, 0);
+            box-shadow: 0 0 20px 10px #fffc0059;
+        }
+
+        50% {
+            background: #2b1ebf;
+            box-shadow: 0 0 0px 0px #fffc0059;
+        }
+
+        100% {
+            background: rgb(224, 78, 78);
+            box-shadow: 0 0 20px 10px #fffc0059;
+        }
+    }
+
+    @keyframes blink-dot-2 {
+        50% {
+            background: rgb(255, 252, 0);
+            box-shadow: 0 0 20px 10px #fffc0059;
+        }
+
+        100% {
+            background: #2b1ebf;
+            box-shadow: 0 0 0px 0px #fffc0059;
+        }
+
+        0% {
+            background: rgb(224, 78, 78);
+            box-shadow: 0 0 20px 10px #fffc0059;
+        }
+    }
+
+    @keyframes blink-dot-3 {
+        100% {
+            background: rgb(255, 252, 0);
+            box-shadow: 0 0 20px 10px #fffc0059;
+        }
+
+        0% {
+            background: #2b1ebf;
+            box-shadow: 0 0 0px 0px #fffc0059;
+        }
+
+        50% {
+            background: rgb(224, 78, 78);
+            box-shadow: 0 0 20px 10px #fffc0059;
+        }
+    }
+
+    .ornament1 {
+        top: 30%;
+        left: 42%;
+        animation: blink-dot-1 2s infinite;
+    }
+
+    .ornament2 {
+        top: 40%;
+        left: 60%;
+        animation: blink-dot-2 2s infinite;
+    }
+
+    .ornament3 {
+        top: 50%;
+        left: 35%;
+        animation: blink-dot-3 2s infinite;
+    }
+
+    .ornament4 {
+        top: 44%;
+        left: 50%;
+        animation: blink-dot-1 2s infinite;
+    }
+
+    .ornament5 {
+        top: 53%;
+        left: 59%;
+        animation: blink-dot-2 2s infinite;
+    }
+
+    .ornament6 {
+        top: 31%;
+        left: 55%;
+        animation: blink-dot-3 2s infinite;
+    }
+
+    .ornament7 {
+        top: 55%;
+        left: 49%;
+        animation: blink-dot-1 2s infinite;
+    }
+
+    .ornament8 {
+        top: 38%;
+        left: 41%;
+        animation: blink-dot-2 2s infinite;
+    }
+
+    .ornament9 {
+        top: 49%;
+        left: 43%;
+        animation: blink-dot-3 2s infinite;
+    }
+
+    .stem {
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        margin-left: -20px;
+        width: 40px;
+        height: 100px;
+        z-index: -1;
+        background-color: #694215;
+    }
+
+    .snow-ground {
+        position: absolute;
+        width: 120px;
+        height: 30px;
+        background-color: whitesmoke;
+        top: 67%;
+        left: 50%;
+        margin-left: -60px;
+        z-index: -5;
+        border-radius: 50%;
+    }
+
+    .snow {
+        position: absolute;
+        top: -10px;
+        background-color: lightblue;
+        border-radius: 50%;
+        animation: fall linear;
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(105vh);
+        }
+    }
+
+    #musicPlayer {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        display: none;
+    }
+
+    .music-controls {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .music-controls button {
+        padding: 10px;
+        cursor: pointer;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    .music-controls button:hover {
+        background-color: #2980b9;
+    }
+
+    .gift {
+        width: 100px;
+        height: 90px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 10px 0 #c9d6e0, 0 12px 0 #aabbc8;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        margin: auto;
+
+        &:after,
+        &:before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 101px;
+            left: 50%;
+            margin-left: -5px;
+            background-color: #f3867f;
+        }
+
+        &:before {
+            height: 100px;
+
+            transform: rotate(90deg);
+        }
+    }
+
+    span {
+        width: 40px;
+        height: 30px;
+        border: 10px solid #f3867f;
+        position: absolute;
+        top: 50%;
+        margin-top: -23px;
+        left: 50%;
+        border-radius: 100% 20px 20px 30%;
+        box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3);
+
+        &:last-child {
+            transform: rotateY(180deg);
+            left: auto;
+            right: 50%;
+        }
+    }
+
+    #letter {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        max-width: 80%;
+        overflow: auto;
+        max-height: 80vh;
+    }
+
+    .typewriter {
+        overflow: hidden;
+        white-space: wrap;
+        justify-content: center;
+    }
+
+    .bg-letter {
+        height: 100%;
+        overflow-y: hidden;
+        padding: 20px;
+        justify-content: center;
+    }
+    
+    .letter {
+        margin: 0;
+        line-height: 1.5;
+        overflow: hidden;
+        font-family: 'Lobster', sans-serif;
+        font-size: 24px;
+        font-weight: normal;
+        color: #black;
+    }
+    

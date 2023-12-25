@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Tree</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <h1>Merry Christmas</h1>
+
+    <!-- Thẻ <audio> để chèn âm nhạc -->
+    <audio controls id="musicPlayer" autoplay>
+        <!-- Đường dẫn đến tệp âm thanh -->
+        <source src="./assets/audio/lofi-christmas-181339.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="music-controls">
+        <button id="playButton">Play</button>
+        <button id="pauseButton">Pause</button>
+        <button id="stopButton">Stop</button>
+    </div>
+    <div class="xmas-tree">
+        <div class="star">
+            <i class="fa-solid fa-star"></i>
+        </div>
+
+        <div class="t1"></div>
+        <div class="t2"></div>
+        <div class="t3"></div>
+        <div class="ornament ornament1"></div>
+        <div class="ornament ornament2"></div>
+        <div class="ornament ornament3"></div>
+        <div class="ornament ornament4"></div>
+        <div class="ornament ornament5"></div>
+        <div class="ornament ornament6"></div>
+        <div class="ornament ornament7"></div>
+        <div class="ornament ornament8"></div>
+        <div class="ornament ornament9"></div>
+        <div class="stem"></div>
+        <div class="snow-ground"></div>
+    </div>
+
+     <!-- Thêm hộp quà và tin nhắn -->
+     <div class="gift-box" onclick="handleGiftClick()">
+        <div class="ribbon"></div>
+        <div class="lid"></div>
+        <div class="box">
+            <div class="gift" onclick="handleGiftClick()">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="letter" class="typewriter">
+        <div class="bg-letter">
+            <h2 class="letter">
+                Wishing you a light and gentle life. Accomplish what you want to do, love the ones you want to love, and be happy with what you have.
+                <br />
+                Merry Christmas!!!
+            </h2>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js" defer></script>
+</body>
+
+</html>
